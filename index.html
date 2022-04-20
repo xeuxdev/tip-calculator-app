@@ -21,7 +21,9 @@
       <img src="images/logo.svg" alt="logo" class="block mx-auto" />
     </header>
 
-    <main class="bg-white rounded-t-3xl py-9 sm:max-w-sm md:max-w-sm mx-auto lg:max-w-[900px] lg:flex lg:justify-center lg:pb-4 lg:items-center lg:max-h-[480px] lg:rounded-3xl">
+    <main
+      class="bg-white rounded-t-3xl py-9 sm:max-w-sm md:max-w-sm mx-auto lg:max-w-[900px] lg:flex lg:justify-center lg:pb-4 lg:items-center lg:max-h-[480px] lg:rounded-3xl"
+    >
       <!-- inputs section -->
       <section class="num-inputs px-6 mb-8">
         <!-- bill section -->
@@ -48,20 +50,38 @@
           <h2 class="labels">Select Tip %</h2>
           <!-- tip section buttons -->
 
-          <div class="tip-buttons grid place-items-center grid-cols-2 gap-4 lg:grid-cols-3" id="btn-group">
-            <button class="tip-btn hover:bg-lightGrayishCyan hover:text-black lg:w-[110px]">
+          <div
+            class="tip-buttons grid place-items-center grid-cols-2 gap-4 lg:grid-cols-3"
+            id="btn-group"
+          >
+            <button
+              value="5"
+              class="tip-btn hover:bg-lightGrayishCyan hover:text-black lg:w-[110px]"
+            >
               5%
             </button>
-            <button class="tip-btn hover:bg-lightGrayishCyan hover:text-black lg:w-[110px]">
+            <button
+              value="10"
+              class="tip-btn hover:bg-lightGrayishCyan hover:text-black lg:w-[110px]"
+            >
               10%
             </button>
-            <button class="tip-btn hover:bg-lightGrayishCyan hover:text-black lg:w-[110px]">
+            <button
+              value="15"
+              class="tip-btn hover:bg-lightGrayishCyan hover:text-black lg:w-[110px]"
+            >
               15%
             </button>
-            <button class="tip-btn hover:bg-lightGrayishCyan hover:text-black lg:w-[110px]">
+            <button
+              value="25"
+              class="tip-btn hover:bg-lightGrayishCyan hover:text-black lg:w-[110px]"
+            >
               25%
             </button>
-            <button class="tip-btn hover:bg-lightGrayishCyan hover:text-black lg:w-[110px]">
+            <button
+              value="50"
+              class="tip-btn hover:bg-lightGrayishCyan hover:text-black lg:w-[110px]"
+            >
               50%
             </button>
             <input
@@ -101,7 +121,7 @@
 
       <!-- output section -->
 
-      <section class="output px-6 lg:w-[405px] ">
+      <section class="output px-6 lg:w-[405px]">
         <div class="pt-10 pb-4 px-5 bg-veryDarkCyan rounded-xl">
           <!-- tip-amount-output -->
 
@@ -122,14 +142,20 @@
               <p class="text-grayishCyan">/ person</p>
             </div>
             <div class="block text-xl">
-              <p class="text-StrongCyan text-4xl flex items-center" id="total-amount">$0.00</p>
+              <p
+                class="text-StrongCyan text-4xl flex items-center"
+                id="total-amount"
+              >
+                $0.00
+              </p>
             </div>
           </div>
           <!-- button -->
           <div class="w-full">
             <button
-              class="w-full bg-darkGrayishCyan opacity-50 text-xl uppercase py-2 rounded-md hover:bg-StrongCyan hover:opacity-60 font-bold text-veryDarkCyan" id="reset-btn"
-            > 
+              class="w-full bg-darkGrayishCyan opacity-50 text-xl uppercase py-2 rounded-md hover:bg-StrongCyan hover:opacity-60 font-bold text-veryDarkCyan"
+              id="reset-btn"
+            >
               Reset
             </button>
           </div>
