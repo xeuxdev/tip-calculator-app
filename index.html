@@ -32,6 +32,7 @@
               type="number"
               min="1"
               placeholder="0"
+              id="bill"
               class="input-btn hover:border-2 hover:border-StrongCyan"
             />
             <img
@@ -47,7 +48,7 @@
           <h2 class="labels">Select Tip %</h2>
           <!-- tip section buttons -->
 
-          <div class="tip-buttons grid place-items-center grid-cols-2 gap-4 lg:grid-cols-3">
+          <div class="tip-buttons grid place-items-center grid-cols-2 gap-4 lg:grid-cols-3" id="btn-group">
             <button class="tip-btn hover:bg-lightGrayishCyan hover:text-black lg:w-[110px]">
               5%
             </button>
@@ -110,7 +111,7 @@
               <p class="text-grayishCyan">/ person</p>
             </div>
             <div class="block text-xl">
-              <p class="text-StrongCyan text-4xl">$0.00</p>
+              <p class="text-StrongCyan text-4xl" id="tip-amount">$0.00</p>
             </div>
           </div>
 
@@ -121,14 +122,14 @@
               <p class="text-grayishCyan">/ person</p>
             </div>
             <div class="block text-xl">
-              <p class="text-StrongCyan text-4xl flex items-center">$0.00</p>
+              <p class="text-StrongCyan text-4xl flex items-center" id="total-amount">$0.00</p>
             </div>
           </div>
           <!-- button -->
           <div class="w-full">
             <button
-              class="w-full bg-darkGrayishCyan opacity-50 text-xl uppercase py-2 rounded-md hover:bg-StrongCyan hover:opacity-60 font-bold text-veryDarkCyan"
-            >
+              class="w-full bg-darkGrayishCyan opacity-50 text-xl uppercase py-2 rounded-md hover:bg-StrongCyan hover:opacity-60 font-bold text-veryDarkCyan" id="reset-btn"
+            > 
               Reset
             </button>
           </div>
