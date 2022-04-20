@@ -46,7 +46,7 @@
           <h2 class="labels">Select Tip %</h2>
           <!-- tip section buttons -->
 
-          <div class="tip-buttons grid grid-cols-2 gap-4 lg:grid-cols-3">
+          <div class="tip-buttons grid place-items-center grid-cols-2 gap-4 lg:grid-cols-3">
             <button class="tip-btn hover:bg-lightGrayishCyan hover:text-black lg:w-[110px]">
               5%
             </button>
@@ -67,7 +67,8 @@
               name="tip"
               id="custom"
               placeholder="Custom"
-              class="w-36 text-right font-bold bg-veryLightGrayishGyan rounded-md text-2xl pr-3 hover:border-2 hover:border-StrongCyan lg:w-[110px]"
+              min="1"
+              class="w-36 text-right font-bold bg-veryLightGrayishGyan py-2 rounded-md text-2xl pr-2 hover:border-2 hover:border-StrongCyan lg:w-[110px] focus:border-2 focus:border-StrongCyan focus:outline-none"
             />
           </div>
         </div>
@@ -84,6 +85,7 @@
               name="people"
               id="no-of-people"
               placeholder="0"
+              min="1"
               class="input-btn"
             />
             <img
@@ -112,7 +114,7 @@
           </div>
 
           <!-- tip total output -->
-          <div class="flex justify-between items-center mb-40">
+          <div class="flex justify-between items-center mb-7 lg:mb-40">
             <div class="block text-left">
               <h4 class="text-white">Total</h4>
               <p class="text-grayishCyan">/ person</p>
@@ -133,7 +135,7 @@
       </section>
     </main>
 
-    <footer class="absolute bottom-0 left-1/2 -translate-x-1/2">
+    <footer class="mt-8">
       <div class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

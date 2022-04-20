@@ -8,11 +8,9 @@ html {
 @tailwind utilities;
 
 .input-btn {
-  @apply w-full block bg-veryLightGrayishGyan text-[24px] font-bold text-right py-2 px-3 rounded-md focus:border-2;
+  @apply w-full block bg-veryLightGrayishGyan text-[24px] font-bold text-right py-2 px-3 rounded-md focus:border-2 focus:border-StrongCyan focus:outline-none;
 }
-.input-btn:focus{
-  border: 2px solid hsl(172, 67%, 45%);
-}
+
 .tip-btn {
   @apply w-36 bg-veryDarkCyan text-[24px] rounded-md py-2 text-veryLightGrayishGyan;
 }
