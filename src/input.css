@@ -12,10 +12,13 @@ html {
 }
 
 .tip-btn {
-  @apply w-36 bg-veryDarkCyan text-[24px] rounded-md py-2 text-veryLightGrayishGyan;
+  @apply w-36 font-bold bg-veryDarkCyan text-[24px] rounded-md py-2 text-veryLightGrayishGyan;
 }
 .labels{
   @apply text-lg text-darkGrayishCyan mb-4 capitalize;
+}
+#no-of-people.error{
+  border: 2px solid red;
 }
 .attribution {
   font-size: 11px;
