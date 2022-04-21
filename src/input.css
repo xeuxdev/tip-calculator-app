@@ -24,6 +24,10 @@ html {
 #no-of-people.error{
   border: 2px solid rgba(255, 0, 0, 0.8);
 }
+#reset-btn.active{
+  background-color: hsl(172, 67%, 45%);
+  opacity: 1;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
