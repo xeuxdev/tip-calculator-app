@@ -8,8 +8,8 @@ const totalAmount = document.querySelector("#total-amount");
 const errorTxt = document.querySelector("#error");
 const resetBtn = document.querySelector("#reset-btn")
 
-let tipPercentage = 15
-let billAmount = 0
+let tip_Percentage = 0
+let bill_Amount = 0
 let no_Of_people = 0
 
 
@@ -20,44 +20,63 @@ function removeActiveTipClass(){
 }
 
 function calculateTip() {
-  if(tipPercentage <= 0 || billAmount <= 0 || no_Of_people <= 0) return
+  if(tip_Percentage <= 0 || bill_Amount <= 0 || no_Of_people <= 0) return
 
-  const tips = (tipPercentage / 100) * billAmount
+  const tips = (tip_Percentage / 100) * bill_Amount
    let tip_Amount = tips / no_Of_people
-  let tip_Total = billAmount / no_Of_people + tip_Amount
+  let tip_Total = bill_Amount / no_Of_people + tip_Amount
   tipAmount.textContent = `$${tip_Amount.toFixed(2)}`
   totalAmount.textContent = `$${tip_Total.toFixed(2)}`
   resetBtn.classList.add("active")
 
 }
 
+function checkInput() {
+  if(isNaN(no_Of_people))return
+  if(no_Of_people < 0) {
+    errorTxt.textContent = "Can't be Zero or Less"
+    noOfPeople.value = ""
+  }
+  if(no_Of_people < 1){
+    noOfPeople.classList.add("error")
+    errorTxt.textContent = "Can't be Zero"
+  }else{
+    noOfPeople.classList.remove("error")
+    errorTxt.textContent = ""
+  }
+}
+
 buttonEl.forEach((percent) => {
   percent.addEventListener("click", () => {
     removeActiveTipClass()
     percent.classList.add("active")
-    tipPercentage = Number(percent.value)
+    tip_Percentage = Number(percent.value)
+    checkInput()
     calculateTip()
   })
 })
 
 customEl.addEventListener("input", (val) => {
   removeActiveTipClass()
-  tipPercentage = Number(val.target.value)
+  tip_Percentage = Number(val.target.value)
   calculateTip()
 })
 
 billEl.addEventListener("input", (val) => {
-  billAmount = Number(val.target.value)
+  bill_Amount = Number(val.target.value)
   calculateTip()
 })
 
 noOfPeople.addEventListener("input", (val) => {
   no_Of_people = Number(val.target.value)
+  checkInput()
   calculateTip()
 })
 
 resetBtn.addEventListener("click", () => {
   billEl.value = ""
+  tip_Percentage = 0
+  customEl.value = ""
   noOfPeople.value = ""
   removeActiveTipClass()
   tipAmount.textContent = "$0.00"
