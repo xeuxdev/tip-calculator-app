@@ -9,6 +9,8 @@ const errorTxt = document.querySelector("#error");
 
 buttonEl.forEach((item) => {
   item.addEventListener("click", () => {
+    btnvalue = parseInt(item.value)
+    console.log(btnValue)
     calculateTip();
   });
 });
@@ -22,8 +24,6 @@ noOfPeople.addEventListener("input", () => {
 });
 
 function calculateTip() {
-  let percent = parseInt(buttonEl);
-  console.log(percent);
   let bill = billEl.value;
   let numberOfPeople = noOfPeople.value;
 
