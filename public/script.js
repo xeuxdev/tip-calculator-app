@@ -68,7 +68,8 @@ billEl.addEventListener("input", (val) => {
 })
 
 noOfPeople.addEventListener("input", (val) => {
-  no_Of_people = Number(val.target.value)
+  let numOfPeople = Number(val.target.value)
+  no_Of_people = Math.ceil(numOfPeople)
   checkInput()
   calculateTip()
 })
